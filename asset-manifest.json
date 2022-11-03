@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/motiv/static/css/main.bd253ef6.css",
+    "main.js": "/motiv/static/js/main.62c916da.js",
+    "static/media/avatar.png": "/motiv/static/media/avatar.560e950a5ef01d89de2d.png",
+    "static/media/cars7.png": "/motiv/static/media/cars7.7e71f383b21282748eca.png",
+    "static/media/cars5.png": "/motiv/static/media/cars5.5749157c1baad182f6a8.png",
+    "static/media/cars3.png": "/motiv/static/media/cars3.0eeab54c7d0f72a08996.png",
+    "static/media/cars9.png": "/motiv/static/media/cars9.0eeab54c7d0f72a08996.png",
+    "static/media/cars1.png": "/motiv/static/media/cars1.7005045a049efa28b866.png",
+    "static/media/cars4.png": "/motiv/static/media/cars4.7005045a049efa28b866.png",
+    "static/media/cars6.png": "/motiv/static/media/cars6.adce44e5642970f86474.png",
+    "static/media/cars2.png": "/motiv/static/media/cars2.71ef7b896d085f1c5730.png",
+    "static/media/carRecommend1.png": "/motiv/static/media/carRecommend1.913adaf79096ea58c57e.png",
+    "static/media/carRecommend2.png": "/motiv/static/media/carRecommend2.c37922792a0606e56463.png",
+    "static/media/carRecommend3.png": "/motiv/static/media/carRecommend3.590a0ad6c7f5d479e8bb.png",
+    "static/media/points.png": "/motiv/static/media/points.99ee9f35299bef92f501.png",
+    "static/media/badge.png": "/motiv/static/media/badge.5bf72b9baf9b7dbd4a1e.png",
+    "index.html": "/motiv/index.html",
+    "main.bd253ef6.css.map": "/motiv/static/css/main.bd253ef6.css.map",
+    "main.62c916da.js.map": "/motiv/static/js/main.62c916da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd253ef6.css",
+    "static/js/main.62c916da.js"
+  ]
+}
