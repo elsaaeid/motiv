@@ -1,0 +1,48 @@
+
+.content-cars > .row > .col > h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 39px;
+    color: #242731;
+    letter-spacing: 1.5px;
+}
+.filter-cars.row {
+    padding: 30px 0px;
+}
+.icon-dashboard {
+    padding: 10px;
+    gap: 10px;
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(53, 53, 53, 0.1);
+    border-radius: 30px;
+}
+.icon-filter {
+    padding: 10px;
+    gap: 10px;
+    width: 44px;
+    height: 44px;
+    background: #A162F7;
+    border-radius: 30px;
+}
+@media screen and (max-width: 540px) {
+.container {
+    margin-top: 46px;
+}
+}
+@media screen and (max-width: 375px) {
+    .select {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .filter-left {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 29px;
+    }
+}

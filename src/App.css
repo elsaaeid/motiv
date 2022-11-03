@@ -1,0 +1,100 @@
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main {
+  position: absolute;
+  left: 327px;
+  top: 0px;
+  width: 80%;
+  background: var(--bg-color);
+}
+.container {
+  padding: 30px 0px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+section{
+  margin-top: 30px;
+}
+.btn-language {
+  width: 100px;
+}
+@media screen and (max-width: 912px) {
+  .main {
+    left: 278px;
+    width: 632px;
+}
+.btn-language {
+  width: 99px;
+}
+}
+@media screen and (max-width: 768px) {
+  .main {
+    left: 134px;
+    width: 633px;
+}
+.btn-language {
+  width: 99px;
+}
+}
+@media screen and (max-width: 540px) {
+  .main {
+    left: 140px;
+    width: 400px;
+}
+.btn-language {
+  width: 99px;
+}
+}
+@media screen and (max-width: 414px) {
+  .main {
+    width: 60%;
+}
+  .btn-language {
+    width: 98px;
+  }
+  }
+  @media screen and (max-width: 412px) {
+    .main {
+      width: 52%;
+  }  
+    .btn-language {
+      width: 98px;
+    }
+  }
+  @media screen and (max-width: 393px) {
+    .btn-language {
+      width: 95px;
+    }
+      .main {
+        width: 63%;
+    }
+  }
+@media screen and (max-width: 375px) {
+  .main {
+    width: 64.5%;
+}
+section {
+  margin-top: 15px;
+}
+.btn-language {
+  width: 95px;
+}
+}
+@media screen and (max-width: 280px) {
+  .main {
+    left: 80px;
+    width: 200px;
+}
+.btn-language {
+  width: 95px;
+}
+}
