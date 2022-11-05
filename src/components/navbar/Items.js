@@ -4,13 +4,9 @@ import Nav from 'react-bootstrap/Nav';
 
 const Items = (props) => {
     return (
-            <Nav className='nav-item'>
-                <Nav.Item className='d-flex justify-end align-middle'>
-                <span className=' mx-20 nav-icon'>{props.icon}</span>
-                </Nav.Item >
-                <Nav.Item className='d-flex justify-end align-middle'>
-                <span className='nav-img'><img src={props.img} alt="img" /></span>
-                </Nav.Item>
+            <Nav className='d-flex flex-row justify-between'>
+                <span className='nav-icon'>{props.icon}</span>
+                <img src={props.img} alt="img" />
             </Nav>
         )
 }

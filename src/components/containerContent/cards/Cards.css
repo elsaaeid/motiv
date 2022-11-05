@@ -83,6 +83,9 @@
         padding-bottom: 1px;
         margin-top: 17px;
     }
+    .card-bottom {
+        margin-left: -16px;
+    }
     .card-icon {
         padding: 8px;
     }
@@ -91,3 +94,12 @@
         margin-top: 10px;
     }
   }
+@media screen and (max-width: 280px)  {
+    .card {
+        width: 80%;
+        height: 82%;
+    }
+    .card-bottom {
+        margin-left: -4px;
+    }
+}

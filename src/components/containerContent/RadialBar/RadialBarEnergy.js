@@ -83,7 +83,7 @@ class RadialBarEnergy extends Component {
           options={this.state.options}
           series={this.state.series}
           type="radialBar"
-          width="290"
+          width="250"
         />
       </div>
     );
