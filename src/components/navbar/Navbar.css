@@ -7,37 +7,49 @@
 .searchContent {
     align-content: center;
 }
-.img-search {
-    width: 100px;
-    height: 100px;
-    margin-top: -41px;
-    margin-left: 17px;
+.SearchBar {
+    align-items: center;
 }
-svg.sc-bczRLJ.fASA-Dv.search-icon {
-    width: 3rem;
-    height: 3rem;
-    padding: 5px;
-    display: flex;
-    margin-top: 0px;
-}
-.sc-dkrFOg.bPNNyh.clear-icon svg {
-    margin-top: 13px;
-}
-header.SearchBar-header div {
-    width: 358px;
-    height: 46px;
+
+.SearchBar-header {
+    align-items: center;
+    font-size: 21px;
     border-radius: 8px;
-    z-index: 2;
+    border: 1px solid #e2e2e2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-header.SearchBar-header div.ellipsis {
-    width: 309px;
-    height: 200px;
+.SearchBar-header input {
+    background-color: var(--bg-color);
+    font-size: 24px;
+    width: 100%;
 }
-.sc-dkzDqf.kOYplv.clear-icon > svg {
-    display: flex;
-    margin-top: 21px;
-    justify-content: flex-end;
-    margin-left: 329px;
+.search-icon {
+    font-size: 25px;
+}
+.result-body {
+    position: relative;
+}
+.table-search {
+    background-color: var(--main-color);
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 50px;
+    position: absolute;
+    left: -130px;
+}
+.table-search::-webkit-scrollbar {
+    display: none;
+}
+.table-search tr th, td {
+    padding: 10px;
+}
+.table-search tr:hover {
+    background-color: var(--bg-color);
+}
+.table-search tr td {
+    cursor: pointer;
 }
 .nav {
     align-items: center;
@@ -70,94 +82,33 @@ header.SearchBar-header div.ellipsis {
     }
 }
 @media screen and (max-width: 820px) {
-    svg.sc-bczRLJ.fASA-Dv.search-icon {
-        width: 30px;
-        height: 26px;
-        margin-left: 24px;
-      }
-      div.result {
-        margin-left: 0px;
-    }
-      header.SearchBar-header div.results {
-        flex-direction: column;
-        width: 8rem;
-        height: 85px;
-        padding-bottom: 7px;
-      }
-.cart-icon span:nth-child(1) {
-    font-size: 23px;
-}
-.pHieT > ul {
-    list-style-type: none;
-    margin: 0;
-    background: #eeeeee;
-    padding: 0px 0px 9px 0;
-    width: 15rem;
-}
+  
+
 }
 @media screen and (max-width: 768px) {
-    .hCpHso > ul {
-        width: 15rem;
-    }
-    svg.sc-bczRLJ.fASA-Dv.search-icon {
-        width: 30px;
-        height: 26px;
-        margin-left: 24px;
-      }
-      header.SearchBar-header div {
-        width: 8rem;
-        height: 40px;
-        margin-left: -12px;
-        padding-bottom: 7px;
-      }
     .nav-img img {
         height: 50px;
         width: 50px;
     }
-    .wrapper input {
-        font-size: 11px;
-    }
     }
 @media screen and (max-width: 540px) {
-    .hCpHso > ul {
-        width: 15rem;
+    .searchContent {
+        margin-left: -7px;
     }
-    svg.sc-bczRLJ.fASA-Dv.search-icon {
-        width: 30px;
-        height: 26px;
-        margin-left: 24px;
-      }
-      header.SearchBar-header div {
-        width: 8rem;
-        height: 40px;
-        margin-left: -12px;
-        padding-bottom: 7px;
-      }
-    .wrapper input {
-        font-size: 11px;
+    .SearchBar-header {
+        font-size: 18px;
+        width: 109px;
+    }
+    .search-icon {
+        font-size: 18px;
+    }
+    .SearchBar-header input {
+        font-size: 13px;
     }
     }
     @media screen and (max-width: 414px) {
         .searchContent {
             margin-left: 26px;
-        }
-        .hCpHso > ul {
-            width: 15rem;
-        }
-        .img-search {
-            width: 80px;
-            height: 80px;
-            margin-top: -31px;
-            margin-left: -4px;
-        }
-        .search-name {
-            margin-right: -20px;
-        }
-        .search-status {
-            margin-top: 12px;
-        }
-        .wrapper input {
-            font-size: 11px;
         }
         .nav-icon::after {
             margin-left: 10px;
@@ -167,11 +118,21 @@ header.SearchBar-header div.ellipsis {
             height: 40px;
             width: 40px;
     }
+    .searchContent {
+        margin-left: -7px;
+    }
+    .SearchBar-header {
+        font-size: 18px;
+        width: 109px;
+    }
+    .search-icon {
+        font-size: 18px;
+    }
+    .SearchBar-header input {
+        font-size: 13px;
+    }
 }
     @media screen and (max-width: 412px) {
-        .hCpHso > ul {
-            width: 13rem;
-        }
         .searchContent {
             margin-left: 35px;
         }
@@ -181,58 +142,46 @@ header.SearchBar-header div.ellipsis {
         }
     }
     @media screen and (max-width: 375px) {
-        .hCpHso > ul {
-            width: 15rem;
-        }
-        .img-search {
-            width: 80px;
-            height: 80px;
-            margin-top: -31px;
-            margin-left: -4px;
-        }
-        .search-name {
-            margin-right: -20px;
-        }
-        .search-status {
-            margin-top: 12px;
-        }
-        .wrapper input {
-            font-size: 11px;
-        }
         .nav img {
             height: 40px;
             width: 40px;
         }
         .searchContent {
-            margin-left: 20px;
+            margin-left: -7px;
+        }
+        .SearchBar-header {
+            font-size: 18px;
+            width: 109px;
+        }
+        .search-icon {
+            font-size: 18px;
+        }
+        .SearchBar-header input {
+            font-size: 13px;
         }
     }
     @media screen and (max-width: 360px) {
-        .hCpHso > ul {
-            width: 13rem;
-        }
     }
     @media screen and (max-width: 280px) {
         .navbar {
             margin-left: 0px;
         }
-        .navbar .searchContent {
-            margin-left: 36px;
+        .searchContent {
+            margin-left: -7px;
         }
-        svg.sc-bczRLJ.fASA-Dv.search-icon {
-            width: 30px;
-            height: 26px;
-            margin-left: 24px;
-          }
-          header.SearchBar-header div {
-            width: 6rem;
+        .SearchBar-header {
+            font-size: 18px;
+            width: 109px;
+        }
+        .search-icon {
+            font-size: 18px;
+        }
+        .SearchBar-header input {
+            font-size: 13px;
         }
         .nav img {
             height: 30px;
             width: 30px;
-        }
-        .wrapper input {
-            font-size: 11px;
         }
 
     }

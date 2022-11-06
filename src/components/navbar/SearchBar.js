@@ -1,60 +1,60 @@
-import React from 'react'
-import { ReactSearchAutocomplete } from 'react-search-autocomplete';
-import dataNavSearch from "./dataNavSearch"
-
-function SearchBar({placeholder}) {
+import React, { useState } from 'react'
+import {GrFormSearch, GrFormClose} from "react-icons/gr";
+import dataNavSearch from './dataNavSearch';
 
 
-  const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
-    console.log(string, results)
+function SearchBar({ placeholder}) {
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
+
+  const handleFilter = (e)=> {
+   const searchWord = e.target.value;
+   setWordEntered(searchWord);
+   const newFilter = dataNavSearch.filter((item) =>{
+    return item.name.toLowerCase().includes(searchWord.toLowerCase());
+   });
+
+   if (searchWord === "") {
+    setFilteredData([])
+   } else {
+    setFilteredData(newFilter);
+   }
   }
 
-  const handleOnHover = (result) => {
-    // the item hovered
-    console.log(result)
+  const clearInput = ()=> {
+    setFilteredData([]);
+    setWordEntered("");
   }
-
-  const handleOnSelect = (item) => {
-    // the item selected
-    console.log(item)
-  }
-
-  const handleOnFocus = () => {
-    console.log('Focused')
-  }
-
-  const formatResult = (item) => {
-    return (
-      
-      <div className='bg-white d-flex justify-center align-items-center flex-column' style={{width: "100%", height: "100%"}}>
-        <a href={item.path}><img  className='img-search cursor-pointer' style={{display: 'block', textAlign: 'left', background: "none"}} src={item.img} alt={item.name} /></a>
-        <div className='d-flex justify-around flex-column'>
-          <span className="search-name" style={{ display: 'block', textAlign: 'center' }}>name: {item.name}</span>
-          <span className="search" style={{ display: 'block', textAlign: 'center' }}>status: {item.status}</span>        
-        </div>
-      </div>
-      
-    )
-  }
-
   return (
-    <div className="SearchBar" style={{zIndex: '1'}}>
-      <header className="SearchBar-header">
-        <div>
-          <ReactSearchAutocomplete
-            items={dataNavSearch}
-            onSearch={handleOnSearch}
-            onHover={handleOnHover}
-            onSelect={handleOnSelect}
-            onFocus={handleOnFocus}
-            autoFocus
-            formatResult={formatResult}
-            placeholder={placeholder}
-          />
-        </div>
+    <div className="SearchBar d-flex justify-center flex-col" style={{zIndex: '1'}}>
+      <header className="SearchBar-header d-flex flex-row justify-center">
+        <div className='search-icon cursor-pointer'>
+          {filteredData.length === 0 ? <GrFormSearch /> : <GrFormClose onClick={clearInput} />}
+          </div>
+        <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
       </header>
+      <div className="result-body" style={{zIndex: '1'}}>
+        {filteredData.length !== 0 && ( 
+          <table className='table-search'>
+        <tr>
+          <th>name</th>
+          <th>product</th>
+          <th>status</th>
+          <th>price</th>
+        </tr>
+        {filteredData.slice(0, 15).map( (item )=> {
+          return(
+          <tr key={item.id}>
+              <th>{item.name}</th>
+              <th><img src={item.img} alt={item.name} style={{background: "none"}} /></th>
+              <th>{item.status}</th>
+              <th>{item.price}</th>
+          </tr>
+          )
+        })}
+        </table>
+        )}
+      </div>
     </div>
   )
 }
